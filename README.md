@@ -37,8 +37,7 @@ A modern React movie discovery application built with the **TMDB API**. Browse t
 ---
 
 ## 🚀 Live Demo
-
-**Coming Soon**
+https://flix-movie-sepia.vercel.app/
 
 ---
 
