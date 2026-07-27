@@ -1,0 +1,324 @@
+.home{
+    width:100%;
+    padding:1.5rem 0 3rem;
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin:20px auto 35px;
+
+    text-align:center;
+}
+
+.hero-title{
+
+    font-size:2.3rem;
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:10px;
+}
+
+.hero-subtitle{
+
+    color:#8b949e;
+
+    font-size:1rem;
+
+    margin-bottom:30px;
+
+    max-width:600px;
+}
+
+/* ---------------- Search ---------------- */
+
+.search-form{
+    display:flex;
+    justify-content:center;
+    margin:0 auto 2.5rem;
+    padding:0 1rem;
+    min-width: 25%;
+}
+
+.search-container{
+
+    width:100%;
+    max-width:760px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:30px;
+
+    padding:6px;
+
+    transition:.25s ease;
+}
+
+.search-container:focus-within{
+
+    border-color:#e50914;
+
+    box-shadow:
+        0 0 0 4px rgba(229,9,20,.15);
+}
+
+.search-icon{
+
+    color:#8b949e;
+
+    margin:0 16px;
+
+    flex-shrink:0;
+    
+}
+
+.search-input{
+
+    flex:1;
+
+    height:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:1rem;
+    padding-left: 10%;  
+}
+
+.search-input::placeholder{
+
+    color:#8b949e;
+}
+
+.search-button{
+
+    height:48px;
+
+    min-width:50px;
+
+    border:none;
+
+    border-radius:50%;
+    margin-right: 3px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    background:linear-gradient(
+        135deg,
+        #e50914,
+        #ff3d5a
+    );
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    box-shadow:
+        0 6px 16px rgba(229,9,20,.25);
+}
+
+.search-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(229,9,20,.4);
+
+    background:linear-gradient(
+        135deg,
+        #f6121d,
+        #ff5c74
+    );
+}
+
+.search-button:active{
+
+    transform:scale(.98);
+}
+
+.search-button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+}
+
+/* ---------------- No movie result---------------- */
+.empty-state{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    margin:80px auto;
+
+    color:#fff;
+}
+
+.empty-state h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.empty-state p{
+
+    color:#8b949e;
+
+    margin-bottom:28px;
+
+    font-size:1rem;
+}
+
+.reset-button{
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#e50914;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.reset-button:hover{
+
+    background:#f6121d;
+
+    transform:translateY(-2px);
+}
+
+/* ---------------- Error ---------------- */
+
+.error-message{
+
+    width:fit-content;
+
+    margin:20px auto;
+
+    background:rgba(248,81,73,.12);
+
+    color:#f85149;
+
+    border:1px solid rgba(248,81,73,.3);
+
+    padding:12px 18px;
+
+    border-radius:12px;
+}
+
+/* ---------------- Loading ---------------- */
+
+.loading{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:200px;
+
+    color:#c9d1d9;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+}
+
+.loading::after{
+
+    content:"...";
+
+    animation:dots 1.5s infinite;
+}
+
+@keyframes dots{
+
+    0%,20%{content:".";}
+    40%{content:"..";}
+    60%,100%{content:"...";}
+}
+
+/* ---------------- Movies ---------------- */
+
+.movies-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,220px);
+
+    justify-content:center;
+
+    gap:1.6rem;
+
+    padding:1rem;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:768px){
+
+    .hero-title{
+
+        font-size:1.8rem;
+    }
+
+    .search-form{
+
+        flex-direction:column;
+    }
+
+    .search-button{
+
+        width:100%;
+    }
+}
+
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}

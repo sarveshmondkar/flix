@@ -1,0 +1,170 @@
+.navbar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 48px);
+  max-width: 1300px;
+
+  z-index: 1000;
+
+  width: calc(100% - 48px);
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 28px;
+
+  background: rgba(22, 27, 34, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+/* ---------- Brand ---------- */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #e50914,
+    #ff5c35
+  );
+
+  color: white;
+
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.35);
+
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  transition: color 0.25s ease;
+}
+
+.navbar-brand:hover .brand-text {
+  color: #ff5c35;
+}
+
+/* ---------- Navigation ---------- */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  color: #d0d7de;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: #21262d;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
+
+.heart-icon {
+  color: #ffffff;
+  fill: transparent;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover .heart-icon {
+  color: #e50914;
+  fill: #e50914;
+  transform: scale(1.1);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .navbar {
+    width: calc(100% - 24px);
+    padding: 12px 18px;
+    top: 12px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-text {
+    font-size: 1.35rem;
+  }
+
+  .nav-link {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: calc(100% - 16px);
+    padding: 10px 14px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+  }
+}
