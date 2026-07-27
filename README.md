@@ -32,7 +32,7 @@ A modern React movie discovery application built with the **TMDB API**. Browse t
 
 | Home | Movie Details | Favorites |
 |------|---------------|-----------|
-| ![](screenshots/home.png) | ![](screenshots/details.png) | ![](screenshots/favorites.png) |
+| ![](frontend/screenshots/home.png) | ![](frontend/screenshots/details.png) | ![](frontend/screenshots/favorites.png) |
 
 ---
 
